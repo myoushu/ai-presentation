@@ -1,0 +1,202 @@
+/* Dark theme matching weatherHistory aesthetic */
+
+:root {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-tertiary: #0f3460;
+  --accent: #4fc3f7;
+  --accent-warm: #e57373;
+  --text-primary: #e0e0e0;
+  --text-muted: #aaaaaa;
+  --grid-color: #2a2a4a;
+}
+
+.reveal-viewport {
+  background: var(--bg-primary);
+}
+
+.reveal {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-primary);
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: var(--accent);
+  text-transform: none;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.reveal h1 {
+  font-size: 2.2em;
+}
+
+.reveal h2 {
+  font-size: 1.6em;
+}
+
+.reveal h3 {
+  font-size: 1.2em;
+  color: var(--text-primary);
+}
+
+.reveal p,
+.reveal li {
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+.reveal ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.reveal ul li::before {
+  content: "\25B8";
+  color: var(--accent);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  padding-left: 1em;
+}
+
+.reveal a {
+  color: var(--accent);
+}
+
+/* Slide-specific styles */
+
+.title-slide h1 {
+  font-size: 2.6em;
+  margin-bottom: 0.3em;
+}
+
+.title-slide .subtitle {
+  font-size: 1.1em;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+.title-slide .author {
+  margin-top: 1.5em;
+  font-size: 0.9em;
+  color: var(--text-muted);
+}
+
+/* Project showcase slides */
+.project-slide h2 {
+  margin-bottom: 0.5em;
+}
+
+.project-slide .project-desc {
+  font-size: 0.75em;
+  color: var(--text-muted);
+  margin-bottom: 0.2em;
+  font-style: italic;
+}
+
+/* Screenshot container */
+.screenshot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 0.5em;
+}
+
+.screenshot-container img {
+  max-height: 420px;
+  max-width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  object-fit: contain;
+}
+
+.screenshot-container.multi img {
+  max-width: 45%;
+  max-height: 380px;
+}
+
+/* Chart container */
+.chart-container {
+  width: 880px;
+  height: 520px;
+  margin: 0.3em auto 0;
+}
+
+/* Video container */
+.video-container {
+  margin-top: 0.5em;
+}
+
+.video-container video,
+.video-container iframe {
+  max-width: 90%;
+  max-height: 450px;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Failed project slide */
+.failed-slide .status {
+  display: inline-block;
+  background: rgba(229, 115, 115, 0.15);
+  color: var(--accent-warm);
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.7em;
+  margin-bottom: 0.5em;
+  border: 1px solid rgba(229, 115, 115, 0.3);
+}
+
+/* Highlight / accent boxes */
+.highlight-box {
+  background: var(--bg-secondary);
+  border-left: 4px solid var(--accent);
+  padding: 16px 24px;
+  border-radius: 0 8px 8px 0;
+  margin: 0.8em auto;
+  max-width: 80%;
+  text-align: left;
+}
+
+.highlight-box p {
+  margin: 0;
+  font-size: 0.8em;
+}
+
+/* Takeaway list */
+.takeaways li {
+  margin-bottom: 0.6em;
+}
+
+/* Image placeholder */
+.image-placeholder {
+  width: 80%;
+  height: 400px;
+  margin: 0.5em auto;
+  border: 2px dashed var(--grid-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.8em;
+}
+
+/* Speaker notes styling (visible in presenter view) */
+aside.notes {
+  font-size: 14px;
+}
+
+/* Transition overrides */
+.reveal .slides section .fragment.fade-in-then-semi-out.visible:not(.current-fragment) {
+  opacity: 0.4;
+}
+
+/* Progress bar color */
+.reveal .progress span {
+  background: var(--accent);
+}

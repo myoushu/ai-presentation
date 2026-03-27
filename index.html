@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What AI Can Do - My Experiences</title>
+
+  <!-- Reveal.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+
+  <!-- Custom theme -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+<div class="reveal">
+  <div class="slides">
+
+    <!-- ============================================ -->
+    <!-- SLIDE 1: Title -->
+    <!-- ============================================ -->
+    <section class="title-slide">
+      <h1>What AI Can Do</h1>
+      <p class="subtitle">A tour of real projects built with AI assistance</p>
+      <p class="author">
+        <!-- Replace with your name -->
+        Your Name
+      </p>
+      <aside class="notes">
+        Introduce yourself. Set the stage: these are real projects you built with AI,
+        not hypothetical demos. Each one shows a different capability.
+      </aside>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SLIDE 2: Framing / What is AI good at? -->
+    <!-- ============================================ -->
+    <section>
+      <h2>What is AI Good At?</h2>
+      <ul>
+        <li class="fragment">Writing and understanding code across languages</li>
+        <li class="fragment">Integrating complex data from multiple sources</li>
+        <li class="fragment">Building full applications from scratch</li>
+        <li class="fragment">Generating images and video</li>
+        <li class="fragment">Analyzing and summarizing information</li>
+      </ul>
+      <aside class="notes">
+        Quick framing slide. Each bullet maps to a project you'll show.
+        Don't dwell here - the demos tell the story.
+      </aside>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SLIDE 3: Weather History - Animated Chart -->
+    <!-- ============================================ -->
+    <section class="project-slide" data-chart-type="annual-trend">
+      <h2>Temperature Trends: 85 Years of Data</h2>
+      <p class="project-desc">Missoula, MT &mdash; 1940-2025</p>
+      <div class="chart-container" id="trend-chart"></div>
+      <span class="fragment" data-chart-action="show-trend-lines" style="display:none;"></span>
+      <aside class="notes">
+        The chart animates as it draws. Wait for it to finish, then click next
+        to reveal the regression trend lines showing the warming rate.
+        This entire visualization was built with AI assistance.
+      </aside>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SLIDE 4: LearnBirds Data Pipeline -->
+    <!-- ============================================ -->
+    <section class="project-slide">
+      <h2>Bird Data Pipeline</h2>
+      <p class="project-desc">AI built an ETL pipeline combining 3 data sources into a rich species database</p>
+      <div class="screenshot-container">
+        <!-- Replace with your screenshot -->
+        <div class="image-placeholder">
+          Add screenshot: assets/images/bird-pipeline-output.png
+        </div>
+      </div>
+      <aside class="notes">
+        This pipeline merges data from ultimate-birds (images/descriptions),
+        eBird (observation frequency by state), and Xeno-canto (audio quality rankings).
+        Produces state-specific JSON with 500+ species ranked by commonality.
+        The entire data pipeline was designed and coded by AI.
+      </aside>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SLIDE 5: SpotAndSong App -->
+    <!-- ============================================ -->
+    <section class="project-slide">
+      <h2>SpotAndSong</h2>
+      <p class="project-desc">A full React Native mobile app for learning bird identification</p>
+      <div class="screenshot-container multi">
+        <!-- Replace with your screenshots -->
+        <div class="image-placeholder" style="width:45%; height:400px;">
+          Add screenshot: assets/images/spotandsong-1.png
+        </div>
+        <div class="image-placeholder" style="width:45%; height:400px;">
+          Add screenshot: assets/images/spotandsong-2.png
+        </div>
+      </div>
+      <aside class="notes">
+        Full cross-platform app: iOS, Android, and web from one codebase.
+        Uses spaced repetition (FSRS algorithm) for visual and audio bird ID flashcards.
+        Complete with theme system, accessibility, streak tracking.
+        AI wrote the entire app including the learning algorithm integration.
+      </aside>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SLIDE 6: World News Briefings -->
+    <!-- ============================================ -->
+    <section class="project-slide">
+      <h2>AI News Intelligence</h2>
+      <p class="project-desc">Daily briefings from 25+ sources with bias detection and multi-source analysis</p>
+      <div class="screenshot-container">
+        <!-- Replace with your screenshot -->
+        <div class="image-placeholder">
+          Add screenshot: assets/images/worldnews-report.png
+        </div>
+      </div>
+      <aside class="notes">
+        Aggregates news from mainstream, international, and investigative sources.
+        Produces daily briefings with coverage comparison tables, bias analysis,
+        and geopolitical context. Each outlet has a credibility profile noting
+        editorial lean and known blind spots.
+      </aside>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SLIDE 7: Movie Recommendations -->
+    <!-- ============================================ -->
+    <section class="project-slide">
+      <h2>Movie Recommendations</h2>
+      <p class="project-desc">AI-assisted movie discovery from YouTube watch data + IMDB ratings</p>
+      <div class="screenshot-container">
+        <!-- Replace with your screenshot -->
+        <div class="image-placeholder">
+          Add screenshot: assets/images/movie-recommendations.png
+        </div>
+      </div>
+      <aside class="notes">
+        Extracts movies from YouTube, enriches with IMDB/Rotten Tomatoes ratings,
+        and surfaces recommendations. Shows AI's ability to connect different
+        data sources into something useful.
+      </aside>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SLIDE 8: What Doesn't Work -->
+    <!-- ============================================ -->
+    <section class="failed-slide">
+      <h2>What Doesn't Work (Yet)</h2>
+      <span class="status">Incomplete</span>
+      <h3>Real-Time Meeting Suggestions</h3>
+      <div class="highlight-box">
+        <p>Captures system audio during meetings &rarr; streams to Gemini Live API &rarr;
+        displays AI-generated talking points in real time.</p>
+      </div>
+      <ul>
+        <li class="fragment">Audio capture, API integration, UI &mdash; all working</li>
+        <li class="fragment">The hard part: tuning <em>when</em> and <em>what</em> to suggest</li>
+        <li class="fragment">Infrastructure is easy. Taste and judgment are not.</li>
+      </ul>
+      <aside class="notes">
+        Be honest about limitations. The plumbing works - AI built the entire
+        Windows desktop app with audio capture, Gemini streaming, and a real-time UI.
+        But the prompt engineering and tuning phase is where it stalled.
+        AI can build the system; refining the human experience still needs human iteration.
+      </aside>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SLIDE 9: AI Image Generation -->
+    <!-- ============================================ -->
+    <section class="project-slide">
+      <h2>AI Image Generation</h2>
+      <p class="project-desc">Google's Nano can generate images from text descriptions</p>
+      <div class="screenshot-container">
+        <!-- Replace with your AI-generated image -->
+        <div class="image-placeholder">
+          Add image: assets/images/nano-banana.png
+        </div>
+      </div>
+      <aside class="notes">
+        Show what Google's Nano model can do with image generation.
+        This leads into the next slide where we bring the image to life with video.
+      </aside>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SLIDE 10: Veo 3.1 - Image to Video -->
+    <!-- ============================================ -->
+    <section class="project-slide">
+      <h2>Bringing Images to Life</h2>
+      <p class="project-desc">Veo 3.1 turns AI-generated images into video</p>
+      <div class="video-container">
+        <!--
+          Option A: Local video file (< 25MB)
+          Uncomment and update src when you have the video:
+        -->
+        <!--
+        <video data-autoplay controls width="800">
+          <source src="assets/videos/veo-demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        -->
+
+        <!--
+          Option B: YouTube embed (for larger videos)
+          Uncomment and replace VIDEO_ID:
+        -->
+        <!--
+        <iframe width="800" height="450"
+          src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
+          frameborder="0" allowfullscreen
+          data-autoplay>
+        </iframe>
+        -->
+
+        <!-- Placeholder until video is added -->
+        <div class="image-placeholder" style="height:450px;">
+          Add video: assets/videos/veo-demo.mp4<br>
+          (uncomment the video or iframe tag above)
+        </div>
+      </div>
+      <aside class="notes">
+        Demo the Veo 3.1 video. Show how AI can take a still image and
+        animate it into a video clip. This represents the frontier of
+        what generative AI can do today.
+      </aside>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SLIDE 11: Takeaways / Q&A -->
+    <!-- ============================================ -->
+    <section>
+      <h2>Takeaways</h2>
+      <ul class="takeaways">
+        <li class="fragment">AI is a powerful collaborator for building real things</li>
+        <li class="fragment">It excels at code, data integration, and content generation</li>
+        <li class="fragment">It struggles with nuance, taste, and the "last mile" of refinement</li>
+        <li class="fragment">The barrier to building has never been lower</li>
+      </ul>
+      <div class="fragment" style="margin-top: 1.5em;">
+        <h3>Questions?</h3>
+      </div>
+      <aside class="notes">
+        Wrap up. Emphasize that these are all real, working projects (except the one
+        you called out). AI didn't replace you - it amplified what you could build.
+      </aside>
+    </section>
+
+  </div>
+</div>
+
+<!-- Plotly.js (for animated chart) -->
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+
+<!-- Reveal.js -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+
+<!-- Weather data (auto-generated by scripts/fetch-weather-data.js) -->
+<script src="js/weather-data.js"></script>
+
+<!-- Chart animation -->
+<script src="js/chart-animation.js"></script>
+
+<script>
+  Reveal.initialize({
+    hash: true,
+    width: 960,
+    height: 700,
+    margin: 0.04,
+    transition: 'slide',
+    transitionSpeed: 'default',
+    controls: true,
+    progress: true,
+    center: true,
+    slideNumber: true,
+
+    // Keyboard shortcuts (defaults: arrows, space, etc.)
+    keyboard: true,
+
+    // Speaker notes: press 'S' to open presenter view
+    showNotes: false
+  });
+</script>
+
+</body>
+</html>
