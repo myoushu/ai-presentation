@@ -238,3 +238,72 @@ aside.notes {
 .reveal .progress span {
   background: var(--accent);
 }
+
+/* === Crumble / Shatter Effect === */
+
+/* Matrix rain canvas -- always full opacity, hidden behind opaque slides */
+#matrix-rain-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Crumble slide section must be transparent so rain shows around popped-out content */
+.reveal .slides section[data-crumble-slide] {
+  background: transparent !important;
+}
+
+/* Opaque content wrapper that pops out */
+.crumble-content-wrapper {
+  background: var(--bg-primary);
+  padding: 40px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.crumble-content-wrapper.crumble-popout {
+  transform: perspective(1200px) translateZ(60px) scale(1.02);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+/* Tile container */
+.crumble-tile-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  pointer-events: none;
+  perspective: 1200px;
+}
+
+/* Individual shatter tile */
+.crumble-tile {
+  position: absolute;
+  backface-visibility: visible;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+/* Pseudo-element for tile thickness (3D depth illusion) */
+.crumble-tile::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 26, 46, 0.8);
+  transform: translateZ(-3px);
+  backface-visibility: hidden;
+}
