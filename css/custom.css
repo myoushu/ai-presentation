@@ -196,8 +196,8 @@
 }
 
 .image-combo img {
-  max-height: 160px;
-  max-width: 220px;
+  max-width: 275px;
+  max-height: 183px;
   border-radius: 6px;
   box-shadow: 0 3px 16px rgba(0, 0, 0, 0.5);
   object-fit: contain;
