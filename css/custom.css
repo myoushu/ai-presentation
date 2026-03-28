@@ -108,7 +108,7 @@
 }
 
 .screenshot-container img {
-  max-height: 420px;
+  max-height: 500px;
   max-width: 90%;
   border-radius: 8px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
@@ -117,7 +117,7 @@
 
 .screenshot-container.multi img {
   max-width: 45%;
-  max-height: 380px;
+  max-height: 460px;
 }
 
 /* Chart container */
@@ -135,7 +135,7 @@
 .video-container video,
 .video-container iframe {
   max-width: 90%;
-  max-height: 450px;
+  max-height: 540px;
   border-radius: 8px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
 }
@@ -176,7 +176,7 @@
 /* Image placeholder */
 .image-placeholder {
   width: 80%;
-  height: 400px;
+  height: 480px;
   margin: 0.5em auto;
   border: 2px dashed var(--grid-color);
   border-radius: 8px;
