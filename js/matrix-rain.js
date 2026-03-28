@@ -25,7 +25,6 @@
   function createCanvas() {
     canvas = document.createElement('canvas');
     canvas.id = 'matrix-rain-canvas';
-    canvas.style.opacity = '1';
     document.body.insertBefore(canvas, document.body.firstChild);
     ctx = canvas.getContext('2d');
     resize();
@@ -111,7 +110,6 @@
   function destroy() {
     stop();
     if (canvas && canvas.parentNode) {
-      window.removeEventListener('resize', resize);
       canvas.parentNode.removeChild(canvas);
     }
     canvas = null;
