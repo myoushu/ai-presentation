@@ -186,6 +186,43 @@
   font-size: 0.8em;
 }
 
+/* Image combination layout (AI video inputs slide) */
+.image-combo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 0.4em;
+}
+
+.image-combo img {
+  max-height: 160px;
+  max-width: 220px;
+  border-radius: 6px;
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.5);
+  object-fit: contain;
+}
+
+.plus-symbol {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.prompt-box {
+  background: var(--bg-secondary);
+  border-left: 4px solid var(--accent);
+  padding: 14px 24px;
+  border-radius: 0 8px 8px 0;
+  margin: 0.6em auto;
+  max-width: 80%;
+  text-align: left;
+  font-style: italic;
+  color: var(--text-primary);
+  font-size: 0.8em;
+}
+
 /* Speaker notes styling (visible in presenter view) */
 aside.notes {
   font-size: 14px;
